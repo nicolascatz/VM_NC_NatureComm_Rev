@@ -1,5 +1,13 @@
 # VM_NC_NatureComm_Rev
-Repository for Analysis software used (LFP analysis)
+Repository for Analysis software used for LFP analysis 
+
+Overview
+
+
+
+
+Repo Contents
+
 
 - You can find the LFP data in a single compiled file (>8 Gb) with the link 
 https://amubox.univ-amu.fr/s/KFrxfd8wK2ZSczq
@@ -8,6 +16,12 @@ https://amubox.univ-amu.fr/s/KFrxfd8wK2ZSczq
 - the output of the different section are either figures or statisical outputs
 - the file named DataframeNCUZUpdated160724.csv contains the file and parameters of each individual data file (file name, date, Stimulation applied, Side , genetic line) 
 
+
+
+System Requirements
+
+
+Software Requirements
 
 
   Nicolas Catz / 2026

@@ -13,22 +13,37 @@ place the downloaded data file and the CSV file in the root directory
 
 # Repo Contents
 
+## Data structure
 
-- You can find the LFP data in a single compiled file (>8 Gb) with the link 
+You can find the LFP data in a single compiled file (>8 Gb) with the link 
 https://amubox.univ-amu.fr/s/KFrxfd8wK2ZSczq
 
 A single variable contains all the data. <br>
 
-LfpPop=np.load(os.path.join(pathroot,'LfpPop.npy'),allow_pickle=True)<br>
-
+<code>LfpPop=np.load(os.path.join(pathroot,'LfpPop.npy'),allow_pickle=True)<br>
 LfpPop.shape <br>
+</code>
+
 (390,1)  <br>
 
-Each row correspond to a given file (same row than in <code>ataframeNCUZUpdated160724.csv</code><br>
+Each row correspond to a given file (same row than in <code>DataframeNCUZUpdated160724.csv</code><br>
 
+
+<code>LfpPop[0].shape</code>
+
+(1,35)  <br>
+Each column correspond to a given channel (electrode) from the file ID=0 <br>
+
+<code>LfpPop[0][0,10].shape</code> <br>
+
+(7,20001) <br>
+
+Each row correspond to a given trial and each column to a time point (in ms realigned on stimulation onset) <br>
+
+## Files
 
 - the File named <code>GenerateFiguresLFP_V1</code> contains the code needed for the analysis of LFP file and representations (all figures)
-- the output of the different section are either figures or statisical outputs
+- the output of the different section are either figures or statistical outputs
 - the file named DataframeNCUZUpdated160724.csv contains the file and parameters of each individual data file (file name, date, Stimulation applied, Side , genetic line) 
 
 

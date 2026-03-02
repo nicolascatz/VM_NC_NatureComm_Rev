@@ -77,8 +77,9 @@ Tested on Python version 3.12.4
   seaborn
 </div>
 
-
-
-
+<br>
+<br>
+<br>
+<br>
 
   Nicolas Catz / 2026

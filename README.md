@@ -5,9 +5,8 @@ Repository for Analysis software used for LFP analysis
 
 The python book available (<code>GenerateFiguresLFP_V1</code>) analyses LFP signals from the compiled data (https://amubox.univ-amu.fr/s/KFrxfd8wK2ZSczq) and individually produce the figures and executes statistical tests. 
 
-In a given folder, create 2 subfolders named "SCRIPTS" and "figures"
-Place the GenerateFiguresLFP_V1 in the folder "SCRIPTS"
-place the downloaded data file and the CSV file in the root directory
+In a given folder, create 1 subfolder named "figures"
+Place the downloaded data file and the CSV file in the root directory
 
 
 

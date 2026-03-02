@@ -17,7 +17,15 @@ place the downloaded data file and the CSV file in the root directory
 - You can find the LFP data in a single compiled file (>8 Gb) with the link 
 https://amubox.univ-amu.fr/s/KFrxfd8wK2ZSczq
 
-A sinle variable contains all the data. 
+A single variable contains all the data. <br>
+
+LfpPop=np.load(os.path.join(pathroot,'LfpPop.npy'),allow_pickle=True)<br>
+
+LfpPop.shape <br>
+(390,1)  <br>
+
+Each row correspond to a given file (same row than in <code>ataframeNCUZUpdated160724.csv</code><br>
+
 
 - the File named <code>GenerateFiguresLFP_V1</code> contains the code needed for the analysis of LFP file and representations (all figures)
 - the output of the different section are either figures or statisical outputs

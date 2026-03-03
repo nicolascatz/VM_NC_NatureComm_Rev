@@ -126,6 +126,22 @@ From spyking circus files
 
 # Calcium imaging analyses
 
+For each conditions run the code inside the corresponding folder following the order to analyse and generate plots
+
+--> Tactile
+--> Tactile_vs_Tactile_urethane
+--> Thermic
+--> Thermic_vs_Thermic_urethane
+--> Warm_vs_Cool
+
+
+To get the analysis of receptive field overlapping between conditions, open 
+
+--> Receptive_field_overlapping.ipynb
+
+To get the analysis of the stereotaxic coordiantes
+
+--> stereotaxic_coordinates_mapping.ipynb
 
 
 <br>

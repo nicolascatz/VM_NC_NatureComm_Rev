@@ -146,7 +146,8 @@ To get the analysis of the stereotaxic coordiantes
 # License
 <br>
 
-This project is covered under the Apache 2.0 License.
+This project is covered under the #Apache 2.0# License.
+
 
 
 <br>

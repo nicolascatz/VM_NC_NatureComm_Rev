@@ -87,21 +87,21 @@ Tested on Python version 3.12.4
 
 <br>
 
-From Neuronexus .xdat files 
+## From Neuronexus .xdat files 
 
 --> convert files into .zarr
 
 --> convert files into .dat
 
 
-From .dat files run into Spyking circus
+## From .dat files run into Spyking circus
 	
---> To do clusturing
+--> To do clustering
 	
 --> To do manual curation 
 
 
-From spyking circus files
+## From spyking circus files
 
 --> open 
 			1_thq_cool_process_sdf.ipynb

@@ -91,7 +91,6 @@ Each row correspond to a given trial and each column to a time point (in ms real
 	5_Fig_Thq_WT_vs_ML2_svg.ipynb
 
 
-<br>
 
 # Calcium imaging analyses
 
@@ -149,7 +148,10 @@ Tested on Python version 3.12.4
 
 ### For SPIKE
 
-
+<code>analysis.yml</code>
+<code>circus.yml</code>
+<code>xdatconverter.yml</code>
+<code>zarrconverter.yml</code>
 
 # License
 <br>

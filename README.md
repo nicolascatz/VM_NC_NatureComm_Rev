@@ -1,7 +1,7 @@
 # VM_NC_NatureComm_Rev
 Repository for Analysis software used for LFP analysis 
 
-#LFP analyses
+# LFP analyses
 
 ## Overview and install
 

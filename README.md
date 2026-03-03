@@ -51,37 +51,6 @@ Each row correspond to a given trial and each column to a time point (in ms real
 
 
 
-## System Requirements
-
-The package development version is tested on Linux operating systems. The developmental version of the package has been tested on the following systems:
-
-Linux: Ubuntu / 2026<br>
-Mac OSX:<br>
-Windows: <br>
-
-## Software Requirements
-
-Any API for code writing (VS Code, JupyterNotebook) <br>
-Tested on Python version 3.12.4
-
-
-### Python Dependencies
-
-<code>Generate_Figures_LFP_animals</code> and <code>Generate_Figures_LFP_channels</code> mainly depends on the Python scientific stack.
-
-<div style="display: flex; background-color: #f6f8fa; padding: 16px; border: 1px solid #d0d7de; border-radius: 6px; margin-top: 10px; margin-bottom: 20px; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 14px; width: fit-content;">
-  numpy<br>
-  scipy<br>
-  matplotlib<br>
-  pandas<br>
-  statsmodels<br>
-  scikit-learn<br>
-  os<br>
-  seaborn
-</div>
-
-<br>
-<br>
 
 # Multiunit analyses
 
@@ -142,6 +111,39 @@ To get the analysis of receptive field overlapping between conditions, open
 To get the analysis of the stereotaxic coordiantes
 
 --> stereotaxic_coordinates_mapping.ipynb
+
+
+# System Requirements
+
+The package development version is tested on Linux operating systems. The developmental version of the package has been tested on the following systems:
+
+Linux: Ubuntu / 2026<br>
+Mac OSX:<br>
+Windows: <br>
+
+# Software Requirements
+
+Any API for code writing (VS Code, JupyterNotebook) <br>
+Tested on Python version 3.12.4
+
+
+## Python Dependencies
+
+<code>Generate_Figures_LFP_animals</code> and <code>Generate_Figures_LFP_channels</code> mainly depends on the Python scientific stack.
+
+<div style="display: flex; background-color: #f6f8fa; padding: 16px; border: 1px solid #d0d7de; border-radius: 6px; margin-top: 10px; margin-bottom: 20px; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 14px; width: fit-content;">
+  numpy<br>
+  scipy<br>
+  matplotlib<br>
+  pandas<br>
+  statsmodels<br>
+  scikit-learn<br>
+  os<br>
+  seaborn
+</div>
+
+<br>
+<br>
 
 # License
 <br>

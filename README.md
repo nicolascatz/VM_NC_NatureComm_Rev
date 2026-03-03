@@ -143,6 +143,11 @@ To get the analysis of the stereotaxic coordiantes
 
 --> stereotaxic_coordinates_mapping.ipynb
 
+# License
+<br>
+
+This project is covered under the Apache 2.0 License.
+
 
 <br>
 <br>

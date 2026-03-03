@@ -1,7 +1,9 @@
 # VM_NC_NatureComm_Rev
 Repository for Analysis software used for LFP analysis 
 
-# Overview and install
+#LFP analyses
+
+## Overview and install
 
 The python book available (<code>GenerateFiguresLFP_V1</code>) analyses LFP signals from the compiled data (https://amubox.univ-amu.fr/s/KFrxfd8wK2ZSczq) and individually produce the figures and executes statistical tests. 
 
@@ -10,9 +12,9 @@ Place the downloaded data file and the CSV file in the root directory
 
 
 
-# Repo Contents
+## Repo Contents
 
-## Data structure
+### Data structure
 
 You can find the LFP data in a single compiled file (>8 Gb) with the link 
 https://amubox.univ-amu.fr/s/KFrxfd8wK2ZSczq
@@ -39,7 +41,7 @@ Each column correspond to a given channel (electrode) from the file ID=0 <br>
 
 Each row correspond to a given trial and each column to a time point (in ms realigned on stimulation onset) <br>
 
-## Files
+### Files
 
 - the File named <code>GenerateFiguresLFP_V1</code> contains the code needed for the analysis of LFP file and representations (all figures)
 - the output of the different section are either figures or statistical outputs
@@ -47,7 +49,7 @@ Each row correspond to a given trial and each column to a time point (in ms real
 
 
 
-# System Requirements
+## System Requirements
 
 The package development version is tested on Linux operating systems. The developmental version of the package has been tested on the following systems:
 
@@ -55,13 +57,13 @@ Linux: Ubuntu / 2026<br>
 Mac OSX:<br>
 Windows: <br>
 
-# Software Requirements
+## Software Requirements
 
 Any API for code writing (VS Code, JupyterNotebook) <br>
 Tested on Python version 3.12.4
 
 
-## Python Dependencies
+### Python Dependencies
 
 <code>GenerateFiguresLFP_V1</code> mainly depends on the Python scientific stack.
 
@@ -81,4 +83,3 @@ Tested on Python version 3.12.4
 <br>
 <br>
 
-  Nicolas Catz / 2026

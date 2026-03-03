@@ -86,6 +86,42 @@ Tested on Python version 3.12.4
 # Multiunit analyses
 
 <br>
+
+From Neuronexus .xdat files 
+
+		--> convert files into .zarr
+
+		--> convert files into .dat
+
+
+	From .dat files run into Spyking circus
+	
+		--> To do clusturing
+	
+		--> To do manual curation 
+
+
+	From spyking circus files
+
+		--> open 
+			1_thq_cool_process_sdf.ipynb
+			1_thq_hot_process_sdf.ipynb
+			1_tactile_process_sdf.ipynb
+
+
+		--> then open 
+			2_Df_cluster_resp_rate.ipynb
+			3_Df_mean_sdf_period_cluster.ipynb
+			4_listing_valid_neurons_threshold.ipynb
+
+
+		--> then make the plot with 
+			5_Fig_Tac_WT_svg.ipynb
+			5_Fig_Thq_WT_svg.ipynb
+			5_Fig_Tac_WT_vs_ML2_svg.ipynb
+			5_Fig_Thq_WT_vs_ML2_svg.ipynb
+
+
 <br>
 
 # Calcium imaging analyses

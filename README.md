@@ -7,7 +7,7 @@ Repository for Analysis software used for all analyses
 
 ## Overview and install
 
-The python book available (<code>GenerateFiguresLFP_V1</code>) analyses LFP signals from the compiled data (https://amubox.univ-amu.fr/s/KFrxfd8wK2ZSczq) and individually produce the figures and executes statistical tests. 
+The python book available (<code>Generate_Figures_LFP_animals.ipynb</code> and <code>Generate_Figures_LFP_channels.ipynb</code>) analyses LFP signals from the compiled data (https://amubox.univ-amu.fr/s/KFrxfd8wK2ZSczq) and individually produce the figures and executes statistical tests. 
 
 In a given folder, create 1 subfolder named "figures"
 Place the downloaded data file and the CSV file in the root directory
@@ -45,7 +45,7 @@ Each row correspond to a given trial and each column to a time point (in ms real
 
 ### Files
 
-- the File named <code>GenerateFiguresLFP_V1</code> contains the code needed for the analysis of LFP file and representations (all figures)
+- the File named <code>Generate_Figures_LFP_animals</code> contains the code needed for the analysis of LFP file and representations (all figures)
 - the output of the different section are either figures or statistical outputs
 - the file named DataframeNCUZUpdated160724.csv contains the file and parameters of each individual data file (file name, date, Stimulation applied, Side , genetic line) 
 
@@ -67,7 +67,7 @@ Tested on Python version 3.12.4
 
 ### Python Dependencies
 
-<code>GenerateFiguresLFP_V1</code> mainly depends on the Python scientific stack.
+<code>Generate_Figures_LFP_animals</code> and <code>Generate_Figures_LFP_channels</code> mainly depends on the Python scientific stack.
 
 <div style="display: flex; background-color: #f6f8fa; padding: 16px; border: 1px solid #d0d7de; border-radius: 6px; margin-top: 10px; margin-bottom: 20px; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 14px; width: fit-content;">
   numpy<br>

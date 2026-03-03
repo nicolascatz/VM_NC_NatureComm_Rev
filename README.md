@@ -89,37 +89,37 @@ Tested on Python version 3.12.4
 
 From Neuronexus .xdat files 
 
-		--> convert files into .zarr
+--> convert files into .zarr
 
-		--> convert files into .dat
+--> convert files into .dat
 
 
-	From .dat files run into Spyking circus
+From .dat files run into Spyking circus
 	
-		--> To do clusturing
+--> To do clusturing
 	
-		--> To do manual curation 
+--> To do manual curation 
 
 
-	From spyking circus files
+From spyking circus files
 
-		--> open 
+--> open 
 			1_thq_cool_process_sdf.ipynb
 			1_thq_hot_process_sdf.ipynb
 			1_tactile_process_sdf.ipynb
 
 
-		--> then open 
-			2_Df_cluster_resp_rate.ipynb
-			3_Df_mean_sdf_period_cluster.ipynb
-			4_listing_valid_neurons_threshold.ipynb
+--> then open 
+	2_Df_cluster_resp_rate.ipynb
+	3_Df_mean_sdf_period_cluster.ipynb
+	4_listing_valid_neurons_threshold.ipynb
 
 
-		--> then make the plot with 
-			5_Fig_Tac_WT_svg.ipynb
-			5_Fig_Thq_WT_svg.ipynb
-			5_Fig_Tac_WT_vs_ML2_svg.ipynb
-			5_Fig_Thq_WT_vs_ML2_svg.ipynb
+--> then make the plot with 
+	5_Fig_Tac_WT_svg.ipynb
+	5_Fig_Thq_WT_svg.ipynb
+	5_Fig_Tac_WT_vs_ML2_svg.ipynb
+	5_Fig_Thq_WT_vs_ML2_svg.ipynb
 
 
 <br>

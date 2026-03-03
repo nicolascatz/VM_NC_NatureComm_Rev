@@ -129,6 +129,8 @@ Tested on Python version 3.12.4
 
 ## Python Dependencies
 
+### for LFP
+
 <code>Generate_Figures_LFP_animals</code> and <code>Generate_Figures_LFP_channels</code> mainly depends on the Python scientific stack.
 
 <div style="display: flex; background-color: #f6f8fa; padding: 16px; border: 1px solid #d0d7de; border-radius: 6px; margin-top: 10px; margin-bottom: 20px; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 14px; width: fit-content;">
@@ -144,6 +146,10 @@ Tested on Python version 3.12.4
 
 <br>
 <br>
+
+### For SPIKE
+
+
 
 # License
 <br>

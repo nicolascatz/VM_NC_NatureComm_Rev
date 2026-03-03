@@ -82,6 +82,16 @@ Tested on Python version 3.12.4
 
 <br>
 <br>
+
+# Multiunit analyses
+
+<br>
+<br>
+
+# Calcium imaging analyses
+
+
+
 <br>
 <br>
 

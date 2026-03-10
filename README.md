@@ -94,96 +94,113 @@ Each row correspond to a given trial and each column to a time point (in ms real
 
 # Calcium imaging analyses
 
+Widefield calcium imaging codes are available **https://amubox.univ-amu.fr/s/NEC9F9E2pbNre7o**
+	
+Widefield calcium imaging data were analysed using scripts located in: CALCIUM/Read_movie/
+	
+These scripts extract calcium fluorescence signals from widefield imaging movies and synchronize imaging frames with thermode stimulation data recorded through the Allego acquisition system.
+The analysis workflow consists of loading stimulation timing information, synchronizing imaging and stimulation signals, and extracting fluorescence traces from regions of interest.
+	
+## Data
 
-	Widefield calcium imaging codes are available https://amubox.univ-amu.fr/s/NEC9F9E2pbNre7o
-	
-	Widefield calcium imaging data were analysed using scripts located in: CALCIUM/Read_movie/
-	
-	These scripts extract calcium fluorescence signals from widefield imaging movies and synchronize imaging frames with thermode stimulation data recorded through the Allego acquisition system.
-	The analysis workflow consists of loading stimulation timing information, synchronizing imaging and stimulation signals, and extracting fluorescence traces from regions of interest.
-	Data
-	The datasets required to run this analysis are available upon request.
-	Please download the dataset and place the files in the working directory before running the notebooks.
-	
-	The analysis requires the following input files.
-	Widefield calcium imaging movies
-	Imaging data are provided as TIFF files: *.tif
-	Each file contains the full calcium imaging movie recorded during stimulation experiments.
-	Mask of the region responsive to tactile stimulation
-	The region of interest responsive to tactile stimulation is provided as a binary mask image (*.tif).
-	These masks were manually created for each recording and used as a reference to visually validate the tactile stimulation masks generated automatically by the analysis scripts. The resulting masks are used to define the regions from which calcium fluorescence signals are extracted.
-	Thermode stimulation data
-	Thermode stimulation recordings are provided as CSV files containing temperature and current measurements: *.csv
-	These files contain the temperature time course during stimulation.
-	Allego acquisition files
-	Stimulation timing and synchronization signals are recorded with the Allego acquisition system.
-	The Allego reader loads a set of files with the same base name:
-	<basename>.xdat.json
-	<basename>_data.xdat
-	<basename>_timestamp.xdat
-	These files contain metadata, signal values, and timestamps used to synchronize imaging frames with stimulation events. The reader functions load auxiliary and digital input signals to identify stimulation timing.
-	Analysis workflow
-	The calcium imaging analysis is performed using the following notebooks in the order listed below.
-	
-	1. read_mask_and_allego.ipynb
-	This notebook performs the initial data loading and synchronization steps:
-	•	loads Allego acquisition recordings containing auxiliary and digital signals
-	•	loads thermode stimulation recordings (temperature and current)
-	•	determines stimulation onset times from thermode and TTL signals
-	•	aligns stimulation events with the corresponding camera frames
-	•	generates synchronization tables linking camera frames, thermode signals, and Allego timestamps
-	The resulting synchronization tables are saved and used in the subsequent analysis to align calcium imaging movies with stimulation events.
-	
-	2. read_traces_from_movie.ipynb
-	This notebook extracts calcium fluorescence signals from the imaging movies using the synchronization information generated in the previous step.
-	It performs the following steps:
-	•	loads the ROI mask corresponding to the tactile-responsive region
-	•	loads the widefield calcium imaging movie
-	•	crops the movie to the region of interest
-	•	loads the synchronization table produced in the previous step
-	•	segments the movie into stimulation-aligned sweeps
-	•	generates stimulation-aligned image stacks
-	•	extracts fluorescence signals from masked regions and surrounding areas
-	•	generates summary plots and stimulation-aligned calcium traces
-	The extracted fluorescence traces represent the calcium responses to thermal stimulation.
-	Python scripts
-	The notebooks rely on additional helper functions implemented in:
-	my_functions.py
-	These functions perform tasks including:
-	•	loading and formatting thermode stimulation data
-	•	reading Allego acquisition signals
-	•	synchronizing stimulation timing with imaging frames
-	•	extracting stimulation-aligned movie segments
-	•	computing fluorescence traces and generating plots
-	The Allego data reader is implemented in:
-	allego_file_reader.py
-	This script reads Allego signal arrays, timestamps, and metadata from the xdat recording files.
-	Outputs
-	Running the notebooks generates:
-	•	synchronization tables linking stimulation events with camera frames
-	•	stimulation-aligned imaging sequences
-	•	fluorescence traces extracted from masked regions
-	•	summary figures illustrating calcium responses across stimulation sweeps
-	These outputs are used for downstream analyses and figure generation.
-	
-	
-	
-	3. For each conditions run the code inside the corresponding folder following the order to analyse and generate plots
-	
-			--> Tactile
-			--> Tactile_vs_Tactile_urethane
-			--> Thermic
-			--> Thermic_vs_Thermic_urethane
-			--> Warm_vs_Cool
-	
-	
-		To get the analysis of receptive field overlapping between conditions, open 
-	
-			--> Receptive_field_overlapping.ipynb
-	
-		To get the analysis of the stereotaxic coordiantes
-	
-			--> stereotaxic_coordinates_mapping.ipynb
+The datasets required to run this analysis are available upon request.<br>
+Please download the dataset and place the files in the working directory before running the notebooks.<br>
+
+The analysis requires the following input files.<br>
+
+###  Widefield calcium imaging movies
+
+Imaging data are provided as TIFF files: *.tif<br>
+Each file contains the full calcium imaging movie recorded during stimulation experiments.<br>
+
+###  Mask of the region responsive to tactile stimulation
+The region of interest responsive to tactile stimulation is provided as a binary mask image (*.tif).
+These masks were manually created for each recording and used as a reference to visually validate the tactile stimulation masks generated automatically by the analysis scripts. The resulting masks are used to define the regions from which calcium fluorescence signals are extracted.
+
+### Thermode stimulation data
+
+Thermode stimulation recordings are provided as CSV files containing temperature and current measurements: *.csv
+These files contain the temperature time course during stimulation.
+
+### Allego acquisition files
+Stimulation timing and synchronization signals are recorded with the Allego acquisition system.<br>
+The Allego reader loads a set of files with the same base name:<br>
+<basename>.xdat.json<br>
+<basename>_data.xdat<br>
+<basename>_timestamp.xdat<br>
+These files contain metadata, signal values, and timestamps used to synchronize imaging frames with stimulation events. The reader functions load auxiliary and digital input signals to identify stimulation timing.<br>
+
+
+## Analysis workflow
+
+The calcium imaging analysis is performed using the following notebooks in the order listed below.
+
+1. read_mask_and_allego.ipynb
+   
+This notebook performs the initial data loading and synchronization steps:<br>
+•	loads Allego acquisition recordings containing auxiliary and digital signals<br>
+•	loads thermode stimulation recordings (temperature and current)<br>
+•	determines stimulation onset times from thermode and TTL signals<br>
+•	aligns stimulation events with the corresponding camera frames<br>
+•	generates synchronization tables linking camera frames, thermode signals, and Allego timestamps<br>
+The resulting synchronization tables are saved and used in the subsequent analysis to align calcium imaging movies with stimulation events.<br>
+
+2. read_traces_from_movie.ipynb
+   
+This notebook extracts calciu fluorescence signals from the imaging movies using the synchronization information generated in the previous step.
+It performs the following steps:<br>
+•	loads the ROI mask corresponding to the tactile-responsive region<br>
+•	loads the widefield calcium imaging movie<br>
+•	crops the movie to the region of interest<br>
+•	loads the synchronization table produced in the previous step<br>
+•	segments the movie into stimulation-aligned sweeps<br>
+•	generates stimulation-aligned image stacks<br>
+•	extracts fluorescence signals from masked regions and surrounding areas<br>
+•	generates summary plots and stimulation-aligned calcium traces<br>
+The extracted fluorescence traces represent the calcium responses to thermal stimulation.<br>
+
+## Python scripts
+
+The notebooks rely on additional helper functions implemented in:
+my_functions.py
+These functions perform tasks including:<br>
+•	loading and formatting thermode stimulation data<br>
+•	reading Allego acquisition signals<br>
+•	synchronizing stimulation timing with imaging frames<br>
+•	extracting stimulation-aligned movie segments<br>
+•	computing fluorescence traces and generating plots<br>
+
+The Allego data reader is implemented in:
+allego_file_reader.py
+This script reads Allego signal arrays, timestamps, and metadata from the xdat recording files.
+
+## Outputs
+
+Running the notebooks generates:
+•	synchronization tables linking stimulation events with camera frames
+•	stimulation-aligned imaging sequences
+•	fluorescence traces extracted from masked regions
+•	summary figures illustrating calcium responses across stimulation sweeps
+These outputs are used for downstream analyses and figure generation.
+
+
+
+For each conditions run the code inside the corresponding folder following the order to analyse and generate plots
+
+	--> Tactile
+	--> Tactile_vs_Tactile_urethane
+	--> Thermic
+	--> Thermic_vs_Thermic_urethane
+	--> Warm_vs_Cool
+
+
+To get the analysis of receptive field overlapping between conditions, open 
+
+	--> Receptive_field_overlapping.ipynb
+
+To get the analysis of the stereotaxic coordiantes
+
+	--> stereotaxic_coordinates_mapping.ipynb
 
 
 
